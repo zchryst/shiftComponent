@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Shift from '../components/Shift/Shift';
 
@@ -13,12 +12,24 @@ const shiftOneDetails = {
   }
 };
 
+const shiftTwoDetails = {
+  startTime: '9:15am',
+  endTime: '2:00pm',
+  role: 'Cowboy',
+  alerts: {
+    critical: ['snake in boot'],
+    low: [],
+  }
+};
+
 
 const Index = () => (
   <div>
-    Hello world
-
     <Shift details={shiftOneDetails} />
+
+    <Shift details={shiftTwoDetails} />
+
+    <Shift details={shiftTwoDetails} long={true} />
   </div>
 );
 
